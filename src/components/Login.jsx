@@ -10,6 +10,7 @@ const Login = () => {
 
   const [emailid,setEmailId] = useState("shivam@gmail.com")
   const [password,setPassword]=useState("Shivam@123")
+  const [error,setError]=useState("")
   const navigate=useNavigate()
   const dispatch=useDispatch()
 
@@ -25,7 +26,9 @@ const Login = () => {
           }
 catch(err)
 {
-  console.log(err)
+  //console.log(err.message)
+  setError(err?.response?.data || "Something went wrong")
+
 }
       }  
 
@@ -55,7 +58,9 @@ catch(err)
    placeholder="Enter Password" 
    className="input input-bordered  w-[350px] rounded  p-3 mx-3" />
   
+  
 </label>
+<p className="text-red-500 ml-3">{error}</p>
     <div className="card-actions justify-center mt-5">
       <button className=" p-3 w-20 rounded bg-cyan-700" onClick={handleLogin}>login</button>
     </div>
