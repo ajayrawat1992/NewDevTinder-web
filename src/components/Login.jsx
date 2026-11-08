@@ -33,7 +33,7 @@ catch(err)
       }  
 
   return (     
-       <div className="card bg-base-300 w-96 shadow-xl m-auto  mt-12 min-h-80 transition hover:scale-105 duration-300 hover:shadow-xl ">
+       <div className="card bg-base-300 w-96 shadow-xl m-auto  mt-12 h-[325px] transition hover:scale-105 duration-300 hover:shadow-xl ">
   <div className="card-body flex  flex-col  ">
     <h2 className="card-title my-5 m-auto text-xl ">Login</h2>
     <label className="form-control w-full ">
@@ -61,7 +61,7 @@ catch(err)
   
 </label>
 <p className="text-red-500 ml-3">{error}</p>
-    <div className="card-actions justify-center mt-5">
+    <div className="card-actions justify-center my-3 ">
       <button className=" p-3 w-20 rounded bg-cyan-700" onClick={handleLogin}>login</button>
     </div>
   </div>

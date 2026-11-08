@@ -14,9 +14,7 @@ const Body = () => {
 
   const fetchUser=async()=>{
     try{
-      console.log("fetching user")
       const res= await axios.get(BASE_URL + "/profile/view",{withCredentials:true})
-      console.log(res.data)
       dispatch(addUser(res.data))
     
     }
@@ -35,9 +33,9 @@ const Body = () => {
   },[])
   
   return (    
-    <div className="flex min-h-screen flex-col">
+    <div className="flex h-screen flex-col overflow-hidden">
     <Header />
-    <main className="min-h-[500px] flex-1">      
+    <main className="min-h-0 flex-1 overflow-hidden">
      <Outlet/>
      </main>
      <Footer />

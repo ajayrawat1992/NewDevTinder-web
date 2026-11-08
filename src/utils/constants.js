@@ -1,2 +1,2 @@
 
-export const BASE_URL= "http://localhost:5300"
+export const BASE_URL = "/api"
