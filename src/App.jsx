@@ -10,6 +10,7 @@ import ErrorPage from './components/ErrorPage'
 import { Provider } from 'react-redux'
 import appStore from './utils/AppStore'
 import Feed from './components/Feed'
+import Connections from './components/Connections'
 
 function App() {
   
@@ -29,7 +30,12 @@ children:[
  {
   path:'/profile',
   element:<Profile/>
- }  
+ },
+ {
+  path:'/connections',
+  element:<Connections/>
+ },
+ 
 ],
 errorElement: <ErrorPage/>,
 }])

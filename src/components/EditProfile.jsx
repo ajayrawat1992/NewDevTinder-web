@@ -74,8 +74,8 @@ const EditProfile = ({user}) => {
   <select
   value={gender || ""}
   onChange={(e) => setGender(e.target.value)}
-  className="select select-bordered select-sm w-full"
->
+  className="select select-bordered select-sm w-full">
+
   <option value="" disabled>Select gender</option>
   <option value="male">Male</option>
   <option value="female">Female</option>
@@ -93,7 +93,6 @@ const EditProfile = ({user}) => {
    placeholder="Enter Age" 
    className="input input-bordered input-sm w-full p-2" />  
 </label>
-
 
 
 <label className="form-control w-full">
@@ -120,7 +119,6 @@ const EditProfile = ({user}) => {
 </label>
 
 
-
      <p className="text-sm text-red-500">{error}</p>
     <div className="card-actions justify-center pt-2">
       <button className="rounded bg-cyan-700 px-4 py-2" onClick={handleSaveProfile}>Save Profile</button>
@@ -137,7 +135,6 @@ const EditProfile = ({user}) => {
     <span>profile saved successfully.</span>
   </div>
 </div>}
-
     </>
   )
 }

@@ -48,7 +48,7 @@ const Header = () => {
             Profile
           </Link>
         </li>
-        <li><a>Settings</a></li>
+        <li><Link to='/connections'>Connections</Link></li>
         <li><a className="cursor-pointer" onClick={handleLogout}>Logout</a></li>
       </ul>
     </div>
