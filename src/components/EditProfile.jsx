@@ -125,7 +125,7 @@ const EditProfile = ({user}) => {
     </div>
   </div>
 </div>
-      <div className="w-96 shrink-0">
+      <div className="w-96">
         <UserCard user={{ firstName, lastName, age, gender, about, photoURL }} />
       </div>
     </div>

@@ -49,15 +49,14 @@ const Header = () => {
           </Link>
         </li>
         <li><Link to='/connections'>Connections</Link></li>
+        <li><Link to='requests'>Requests</Link></li>
         <li><a className="cursor-pointer" onClick={handleLogout}>Logout</a></li>
       </ul>
     </div>
   </div>)}
   
-</div>
-
-    
-  )
-}
+</div>    
+  
+)}
 
 export default Header

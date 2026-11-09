@@ -13,7 +13,7 @@ const Feed = () => {
       
   try {
     const user= await axios.get(BASE_URL+"/feed",{withCredentials:true})
-    //console.log(user.data)
+    console.log(user.data)
     dispatch(addFeed(user.data))
     }
 catch(err)
@@ -27,8 +27,10 @@ catch(err)
             getFeed()
         },[])
 
-  return  feed && (
-    <div className="flex justify-center my-5 h-[500px]">
+if(!feed || feed.length===0) return <h1 className="text-center my-10 text-xl">No feed found</h1>
+
+  return   (
+    <div className="flex justify-center my-5 h-[500px]">  
       <UserCard user={feed[0]} />
     </div>
   )
